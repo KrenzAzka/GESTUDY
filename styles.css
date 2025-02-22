@@ -15,18 +15,26 @@ body {
 /* Wave styles */
 .wave {
   position: absolute;
-  width: 100%;
+  width: 100%; /* Make it stretch across the width */
   height: auto;
+  max-height: 100px; /* Adjust for proper sizing */
+  z-index: 1; /* Ensure it is behind content */
+}
+
+/* Top Wave */
+.wave {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
 }
 
 .wave-top {
   top: 0;
-  left: 0;
 }
 
 .wave-bottom {
   bottom: 0;
-  right: 0;
   transform: rotate(180deg);
 }
 
@@ -44,12 +52,14 @@ button {
   font-size: 1.2rem;
   background: limegreen;
   color: white;
-  border: 50px;
+  border: 2px solid whitesmoke; /* Fix: Added 'solid' style */
   border-radius: 20px;
   cursor: pointer;
-  border-color: whitesmoke;
 }
 
+button:hover {
+  background: #1b711b;
+}
 
 .roboto-regular {
   font-family: "Roboto", serif;
