@@ -59,3 +59,16 @@ button {
   font-variation-settings:
     "wdth" 100;
 }
+
+@keyframes splash-anim {
+  from {scale: 0%; opacity: 0%;}
+  to {scale: 100%; opacity: 100%;}
+}
+
+.splash-icon {
+  width: 70%; 
+  height: fit-content; 
+  animation-name: splash-anim; 
+  animation-duration: 2.5s;
+  transition-timing-function: ease-out;
+}
