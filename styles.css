@@ -15,27 +15,17 @@ body {
 /* Wave styles */
 .wave {
   position: absolute;
-  width: 100%; /* Make it stretch across the width */
-  height: auto;
-  max-height: 100px; /* Adjust for proper sizing */
-  z-index: 1; /* Ensure it is behind content */
-}
-
-/* Top Wave */
-.wave {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: -1;
 }
 
 .wave-top {
   top: 0;
+  left: 0;
 }
 
 .wave-bottom {
   bottom: 0;
-  transform: rotate(180deg);
+  right: 0;
+  transform: rotate(180deg)
 }
 
 /* Content styling */
