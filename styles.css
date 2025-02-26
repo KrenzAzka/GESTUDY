@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100v h;
-  overflow: hidden; /* Completely disable scrolling */
+  overflow:auto; /* Completely disable scrolling */
 }
 
 /* General styling */
@@ -29,7 +29,7 @@ html, body {
 
 .circle {
   position: absolute;
-  top: -17.5%;
+  top: -22.5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
