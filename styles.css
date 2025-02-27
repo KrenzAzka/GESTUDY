@@ -2,8 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100v h;
-  overflow:auto; /* Completely disable scrolling */
+  height: 100%;
+  overflow: hidden;
 }
 
 /* General styling */
@@ -29,10 +29,12 @@ html, body {
 
 .circle {
   position: absolute;
-  top: -22.5%;
+  top: -15%;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo-container {
@@ -54,7 +56,7 @@ html, body {
 
 /* Categories Section */
 .categories {
-  margin-top: 75px;
+  margin-top: 125px;
 }
 
 .category-title {
