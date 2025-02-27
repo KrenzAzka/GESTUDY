@@ -29,7 +29,6 @@ html, body {
 
 .circle {
   position: absolute;
-  top: -15%;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -45,7 +44,7 @@ html, body {
 
 .logo {
   width: 160px; /* Adjust as needed */
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .h1-main {
