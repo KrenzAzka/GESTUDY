@@ -33,7 +33,7 @@ html, body {
   transform: translateX(-50%);
   z-index: -1;
   width: 100vw;
-  height: auto;
+  height: 35%;
 }
 
 .logo-container {
@@ -55,7 +55,7 @@ html, body {
 
 /* Categories Section */
 .categories {
-  margin-top: 125px;
+  margin-top: 20%;
 }
 
 .category-title {
