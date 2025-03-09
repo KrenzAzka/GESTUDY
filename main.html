@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
 </head>
@@ -13,20 +13,21 @@
     <img src="GESTUDY-logo.png" class="logo">
     <h1 class="h1-main league-spartan-normal">GESTUDY</h1>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <h2 class="category-title">Categories</h2>
-
-        <div class="category">
-            <img src="logo-ips.png" alt="Ilmu Pengetahuan Sosial">
-            <p>Ilmu Pengetahuan Sosial</p>
-        </div>
-
-        <div class="category">
+    <section class="category">
+        <div>CATEGORIES</div>
+        
+        <button onclick="window.location='video-list-ipa.html'">
             <img src="logo-ipa.png" alt="Ilmu Pengetahuan Alam">
-            <p>Ilmu Pengetahuan Alam</p>
-        </div>
+        </button>
+        <p class="league-spartan-normal">Ilmu Pengetahuan Alam</p>
+    
+        <button onclick="window.location='video-list-ips.html'">
+            <img src="logo-ips.png" alt="Ilmu Pengetahuan Sosial">
+        </button>
+        <p class="league-spartan-normal">Ilmu Pengetahuan Sosial</p>
     </section>
+    
 
     <script src="script.js"></script>
 </body>
+</html>
