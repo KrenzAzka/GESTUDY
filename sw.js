@@ -31,7 +31,7 @@ self.addEventListener("install", (event) => {
 
   
 self.addEventListener("fetch", (event) => {
-    if (event.request.url.includes("GESTUDY")) { // Ensure only requests within your repo are cached
+    if (event.request.url.includes(BASE_URL)) { // Ensure only requests within your repo are cached
       event.respondWith(
         caches.match(event.request).then((response) => {
           return response || fetch(event.request);
