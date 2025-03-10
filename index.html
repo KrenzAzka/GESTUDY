@@ -6,13 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0ac2f1">
 </head>
 <body class="body-start">
-    <script src="script.js"></script>
-
     <img src="GESTUDY-logo.png" class="splash-icon">
     <script>
-        setTimeout(() => { window.location.href = "landing.html";}, 4000)
+        function handleRedir() {
+            const hasVisited = localStorage.getItem("hasVisited"); // Correct retrieval
+
+            if (hasVisited) {
+                window.location.href = "main.html"; // If visited before
+            } else {
+                window.location.href = "landing.html"; // First-time user
+            }
+        }
+
+        setTimeout(handleRedir, 4000); // Call function after 4s
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
