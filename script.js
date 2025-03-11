@@ -11,7 +11,11 @@ window.addEventListener("load", () => {
   const installButton = document.getElementById("installButton");
 
   // Check if the PWA is running in standalone mode
-  if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
+  function isStandalone() {
+      return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+  }
+
+  if (isStandalone()) {
       installButton.style.display = "none"; // Hide the button
   }
 
@@ -26,19 +30,21 @@ window.addEventListener("load", () => {
 
   // Handle install button click
   installButton.addEventListener("click", () => {
-      if (deferredPrompt) {
-          deferredPrompt.prompt(); // Show the install prompt
-          deferredPrompt.userChoice.then((choice) => {
-              if (choice.outcome === "accepted") {
-                  installButton.style.display = "none"; // Hide the button after install
-              }
-              deferredPrompt = null;
-          });
-      }
+      if (!deferredPrompt) return;
+
+      deferredPrompt.prompt(); // Show install prompt
+      deferredPrompt.userChoice.then((choice) => {
+          if (choice.outcome === "accepted") {
+              console.log("PWA Installed");
+              installButton.style.display = "none"; // Hide the button after install
+          }
+          deferredPrompt = null;
+      });
   });
 
   // Hide button when app is installed
   window.addEventListener("appinstalled", () => {
+      console.log("App installed successfully!");
       installButton.style.display = "none";
   });
 });
