@@ -7,11 +7,13 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
     <link rel="manifest" href="/GESTUDY/manifest.json">
     <meta name="theme-color" content="#0ac2f1">
 </head>
 <body class="body-start"> 
     <img src="GESTUDY-wave.png" class="wave wave-top">
+    <button class="install-button league-spartan-normal" id="install-button" style="display: none;" onclick="installPWA()">Install</button>
     <div class="content">
         <p style="text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);" class="roboto-regular">Selamat Datang</p>
         <button class="button-start" style="width: 175px;" 
@@ -22,6 +24,6 @@
     </div>
     <img src="GESTUDY-wave.png " class="wave wave-bottom">    
 
-    <script></script> <!-- Moved to bottom -->
+    <script src="script.js"></script> <!-- Moved to bottom -->
 </body>
 </html>

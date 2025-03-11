@@ -231,3 +231,15 @@ html, body {
   align-items: center;
   gap: 30px;
 }
+
+.install-button {
+  border: 2.5px white solid;
+  right: 15px;
+  top: 15px;
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  border-radius: 10%;
+  color: white;
+  font-size: 28px;
+  height: 36px;
+}
