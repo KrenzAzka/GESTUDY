@@ -3,21 +3,25 @@ document.body.style.overflow = 'hidden';
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/GESTUDY/sw.js")
-        .then((reg) => console.log("Service Worker registered!", reg))
-        .catch((err) => console.log("Service Worker registration failed:", err));
+        .then((reg) => {
+            console.log("Service Worker registered!", reg);
 
-    navigator.serviceWorker.register('/sw.js').then((reg) => {
-        reg.onupdatefound = () => {
-            const installingWorker = reg.installing;
-            installingWorker.onstatechange = () => {
-                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                    console.log("New version available. Reloading...");
-                    window.location.reload();
-                }
+            reg.onupdatefound = () => {
+                const installingWorker = reg.installing;
+                installingWorker.onstatechange = () => {
+                    if (installingWorker.state === "installed" && navigator.serviceWorker.controller) {
+                        console.log("New version available. Reloading...");
+                        caches.keys().then((cacheNames) => {
+                            cacheNames.forEach((cache) => caches.delete(cache)); // ✅ Clear old cache manually
+                        });
+                        window.location.reload(); // ✅ Reload to get new content
+                    }
+                };
             };
-        };
-    });
+        })
+        .catch((err) => console.log("Service Worker registration failed:", err));
 }
+
 
 window.addEventListener("load", () => {
   const installButton = document.getElementById("installButton");
