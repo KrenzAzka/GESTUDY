@@ -91,3 +91,17 @@ window.addEventListener("DOMContentLoaded", () => {
     window.matchMedia("(display-mode: standalone)").addEventListener("change", checkStandaloneMode);
 });
 
+function installPWA() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt(); // Show the install prompt
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+                console.log("User accepted the PWA install");
+            } else {
+                console.log("User dismissed the PWA install");
+            }
+            deferredPrompt = null; // Reset the deferred prompt
+        });
+    }
+}
