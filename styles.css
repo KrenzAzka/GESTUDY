@@ -114,6 +114,10 @@ html, body {
 
 /* Content styling */
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 1;
   color: #c1ff72;
@@ -123,7 +127,7 @@ html, body {
 
 .button-start {
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   background: limegreen;
   color: white;
   border: 2px solid whitesmoke; /* Fix: Added 'solid' style */
@@ -230,16 +234,4 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-}
-
-.install-button {
-  border: 2.5px white solid;
-  right: 15px;
-  top: 15px;
-  position: absolute;
-  background-color: rgba(0,0,0,0);
-  border-radius: 10%;
-  color: white;
-  font-size: 28px;
-  height: 36px;
 }
