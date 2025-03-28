@@ -1,4 +1,4 @@
-const CACHE_NAME = "gestudy-cache-v1.4"; // Increment version to force cache update
+const CACHE_NAME = "gestudy-cache-v1.5"; // Increment version to force cache update
 const BASE_URL = "/GESTUDY/"; // Make sure this matches your GitHub repo name
 
 const assetsToCache = [

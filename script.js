@@ -22,6 +22,36 @@ if ("serviceWorker" in navigator) {
         .catch((err) => console.log("Service Worker registration failed:", err));
 }
 
+
+let deferredPrompt; // Declare globally
+
+window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault(); // Prevent auto-popup
+    deferredPrompt = event; // Save the event for later use
+    console.log("Install prompt saved.");
+    
+    // Show install button
+    document.getElementById("browserButton").style.display = "block";
+});
+
+function installPWA() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt(); // Show install prompt
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+                console.log("User accepted the PWA install");
+            } else {
+                console.log("User dismissed the PWA install");
+            }
+            deferredPrompt = null; // Reset after interaction
+        });
+    } else {
+        console.log("No install prompt available.");
+    }
+}
+
+// Check if running in standalone mode
 window.addEventListener("DOMContentLoaded", () => {
     const standaloneButton = document.getElementById("standaloneButton");
     const browserButton = document.getElementById("browserButton");
@@ -30,32 +60,14 @@ window.addEventListener("DOMContentLoaded", () => {
         const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
         
         if (isStandalone) {
-            standaloneButton.style.display = "block"; // Show button in standalone mode
-            browserButton.style.display = "none";
+            standaloneButton.style.display = "block"; // Show standalone button
+            browserButton.style.display = "none"; // Hide install button
         } else {
-            standaloneButton.style.display = "none"; // Hide button in browser mode
-            browserButton.style.display = "block";
+            standaloneButton.style.display = "none";
+            browserButton.style.display = "block"; // Show install button
         }
     }
 
-    // Run on page load
     checkStandaloneMode();
-
-    // Listen for changes in display mode (useful for iOS)
     window.matchMedia("(display-mode: standalone)").addEventListener("change", checkStandaloneMode);
 });
-
-function installPWA() {
-    if (deferredPrompt) {
-        deferredPrompt.prompt(); // Show the install prompt
-
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === "accepted") {
-                console.log("User accepted the PWA install");
-            } else {
-                console.log("User dismissed the PWA install");
-            }
-            deferredPrompt = null; // Reset the deferred prompt
-        });
-    }
-}
