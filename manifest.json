@@ -5,6 +5,7 @@
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0ac2f1",
+    "orientation": "portrait-primary",
     "icons": [
       {
         "src": "/GESTUDY/icons/icon-192x192.png",
