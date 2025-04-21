@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "question": "1. Apa itu sumber daya alam?",
+      "options": ["A. Barang yang dibuat manusia", "B. Segala sesuatu yang ada di alam dan bisa digunakan", "C. Semua benda yang ada di toko", "D. Benda yang hanya bisa dipakai sekali"],
+      "answer": "B. Segala sesuatu yang ada di alam dan bisa digunakan"
+    },
+    {
+      "id": 2,
+      "question": "2. Contoh sumber daya alam yang bisa diperbarui adalah?",
+      "options": ["A. Air, pohon, dan sinar matahari", "B. Minyak bumi dan batu bara", "C. Emas dan besi", "D. Plastik dan kaca"],
+      "answer": "A. Air, pohon, dan sinar matahari"
+    },
+    {
+        "id": 3 ,
+        "question": "3. Contoh sumber daya alam yang tidak bisa diperbarui adalah?",
+        "options": ["A. Pohon dan rumput", "B. Matahari dan angin", "C. Minyak bumi dan emas", "D. Air dan udara"],
+        "answer": "C. Minyak bumi dan emas"
+    },
+    {
+        "id": 4,
+        "question": "4. Mengapa minyak bumi tidak bisa diperbarui?",
+        "options": ["A. Karena minyak bumi bisa bertambah sendiri", "B. Karena minyak bumi bisa diganti dengan air", "C. Karena minyak bumi bisa dibuat setiap hari", "D. Karena minyak bumi tidak bisa dibuat lagi dengan cepat"],
+        "answer": "D. Karena minyak bumi tidak bisa dibuat lagi dengan cepat"
+    },
+    {
+        "id": 5,
+        "question": "5. Bagaimana cara menjaga sumber daya alam?",
+        "options": ["A. Membuang sampah ke sungai", "B. Menggunakan air dan listrik dengan hemat", "C. Menggunakan kendaraan bermotor terus-menerus", "D. Menebang semua pohon di hutan"],
+        "answer": "B. Menggunakan air dan listrik dengan hemat"
+    } 
+  ]
+   

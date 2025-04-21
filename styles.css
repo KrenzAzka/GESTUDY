@@ -22,9 +22,13 @@ html, body {
 
 .body-main {
   font-family: Arial, sans-serif;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push .category to the bottom */
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .circle {
@@ -43,16 +47,24 @@ html, body {
 }
 
 .logo {
-  width: 160px; /* Adjust as needed */
-  margin-top: 10px;
+  width: 160px;
+  margin: 10px auto 0 auto; /* centers horizontally */
+  display: block;
 }
 
 .h1-main {
   color: white;
   font-size: 32px;
-  margin-top: 5px;
-  margin-bottom: 15vh;
+  margin-top: 10px; /* Distance from logo */
 }
+
+.header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* ← This sets the 10px spacing between logo and heading */
+}
+
 
 /* Categories Section */
 .category {
@@ -61,6 +73,7 @@ html, body {
   align-items: center;
   text-align: center;
   gap: 5px; /* Adds spacing between elements */
+  margin-bottom: calc(7.5vh + env(safe-area-inset-bottom, 20px));
 }
 
 .category div {
@@ -234,4 +247,33 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 30px;
+}
+
+#question {
+  text-align: center;
+}
+
+#quiz-container {
+  margin-top: 37vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextbutton {
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.quiz-options {
+  height: 10vh;
+  color: blue;
 }

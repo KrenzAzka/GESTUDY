@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <title>Quiz IPA 1</title>
+    <link rel="manifest" href="/GESTUDY/manifest.json">
+    <meta name="theme-color" content="#0ac2f1">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+</head>
+<body>
+    <header class="header-main league-spartan-normal">
+        <button onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        QUIZ
+    </header>
+
+    <div id="quiz-container" class="league-spartan-normal">
+        <h2 id="question" class="league-spartan-normal">Question here</h2>
+        <div id="options"></div>
+        <button onclick="nextQuestion()" class="nextbutton">Next</button>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        async function loadQuiz() {
+            const response = await fetch("soal-quiz-ipa-1.json");
+            const questions = await response.json();
+            displayQuestion(questions[currentQuestionIndex]);
+        }
+
+        function displayQuestion(question) {
+            document.getElementById("question").innerText = question.question;
+            let optionsHtml = "";
+            question.options.forEach(option => {
+                optionsHtml += `<button onclick="checkAnswer('${option}', '${question.answer}')" class="quiz-options">${option}</button>`;
+            });
+            document.getElementById("options").innerHTML = optionsHtml;
+        }
+
+        function checkAnswer(selected, correct) {
+            if (selected === correct) {
+                score++;
+                alert("Correct!");
+            } else {
+                alert("Wrong answer.");
+            }
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            loadQuiz();
+        }
+
+        window.onload = loadQuiz;
+    </script>
+</body>
+</html>

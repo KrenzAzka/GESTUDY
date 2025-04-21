@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "1. Apa itu pemanasan bumi?",
+    "options": ["A. Bumi menjadi lebih dingin", "B. Bumi menjadi lebih panas", "C. Hujan turun setiap hari", "D. Udara semakin segar"],
+    "answer": "B. Bumi menjadi lebih panas"
+  },
+  {
+    "id": 2,
+    "question": "2. Apa yang membuat bumi menjadi panas?",
+    "options": ["A. Banyak asap dari pabrik dan mobil", "B. Banyak hujan turun", "C. Banyak pohon ditanam", "D. Udara lebih sejuk"],
+    "answer": "A. Banyak asap dari pabrik dan mobil"
+  },
+  {
+      "id": 3 ,
+      "question": "3. Apa yang terjadi jika bumi semakin panas?",
+      "options": ["A. Es di kutub mencair", "B. Hewan menjadi lebih banyak", "C. Hujan turun setiap hari", "D. Air laut semakin sedikit"],
+      "answer": "A. Es di kutub mencair"
+  },
+  {
+      "id": 4,
+      "question": "4. Apa yang terjadi jika es di kutub mencair?",
+      "options": ["A. Air laut naik dan pulau bisa tenggelam", "B. Daratan menjadi lebih luas", "C. Udara semakin dingin", "D. Tidak ada perubahan apa pun"],
+      "answer": "A. Air laut naik dan pulau bisa tenggelam"
+  },
+  {
+      "id": 5,
+      "question": "5. Bagaimana cara mengurangi pemanasan bumi?",
+      "options": ["A. Menanam pohon dan menghemat listrik", "B. Menyalakan lampu sepanjang waktu", "C. Menggunakan kendaraan bermotor setiap saat", "D. Menebang pohon lebih banyak"],
+      "answer": "A. Menanam pohon dan menghemat listrik"
+  } 
+]
