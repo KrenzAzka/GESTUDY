@@ -274,6 +274,6 @@ html, body {
 }
 
 .quiz-options {
-  height: 10vh;
-  color: blue;
+  height: 5vh;
+  flex-shrink: 0;
 }
