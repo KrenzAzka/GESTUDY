@@ -1,4 +1,4 @@
-const CACHE_NAME = "gestudy-cache-v1.6"; // Increment version to force cache update
+const CACHE_NAME = "gestudy-cache-v2"; // Increment version to force cache update
 const BASE_URL = "/GESTUDY/"; // Make sure this matches your GitHub repo name
 
 const assetsToCache = [
@@ -20,7 +20,11 @@ const assetsToCache = [
     `${BASE_URL}GESTUDY-logo.png`,
     `${BASE_URL}GESTUDY-wave.png`,
     `${BASE_URL}logo-ipa.png`,
-    `${BASE_URL}logo-ips.png`
+    `${BASE_URL}logo-ips.png`,
+    `${BASE_URL}quiz-ipa-1-new.html`,
+    `${BASE_URL}quiz-ipa-2-new.html`,
+    `${BASE_URL}soal-quiz-ipa-1.json`,
+    `${BASE_URL}soal-quiz-ipa-2.json`
 ];
 
 // ✅ Install Event - Caches Files
